@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/degrade"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/barra_superior"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/atributos_texto"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/frequenciacardiaca" />
+
+            <TextView
+                android:id="@+id/atributo_barra_superior_vida_atual"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="150"
+                android:textColor="#000000"
+                app:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/atributos_texto"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/potion" />
+
+            <TextView
+                android:id="@+id/atributo_barra_superior_mana_atual"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="150000"
+                android:textColor="#000000"
+                app:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/atributos_texto"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/money" />
+
+            <TextView
+                android:id="@+id/atributo_barra_superior_dinheiro"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="150"
+                android:textColor="#000000"
+                app:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/atributos_texto"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/atributo_barra_superior_experiencia"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="150"
+                android:textColor="#000000"
+                app:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/branco"
+        app:layout_constraintBottom_toTopOf="@+id/botão"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_superior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Experiencia"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_experiencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Dinheiro"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_dinheiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Vida Atual"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_vida_atual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Vida Maxima"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_vida_maxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Mana Atual"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_mana_atual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Mana Maxima"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_mana_maxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Sanidade Maxima"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_sanidade_maxima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Sanidade Minima"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_sanidade_minima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Sanidade atual"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_sanidade_atual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Sorte"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_sorte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Inteligencia"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_inteligencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Constituição"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_constituição"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Força"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_força"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Destreza"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_destreza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Carisma"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_carisma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                tools:srcCompat="@drawable/explosion" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 1 Nome"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill1_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 1 Valor Base"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 1 Dado Valor Aleatorio"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill1_dado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                tools:srcCompat="@drawable/espadas" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 2 Nome"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill2_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 2 Valor Base"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 2 Dado Valor Aleatorio"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill2_dado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                tools:srcCompat="@drawable/cuidado" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 3 Nome"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill3_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 3 Valor Base"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#101010" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?attr/colorControlHighlight"
+                android:text="Skill 3 Dado Valor Aleatorio"
+                android:textColor="#0E0E0E" />
+
+            <EditText
+                android:id="@+id/atributo_skill3_dado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorControlHighlight"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="8dp"
+                android:textColor="#101010" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botão"
+        android:layout_width="match_parent"
+        android:onClick="submit"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/quiz_background_texto"
+        android:text="ENVIAR"
+        android:textColor="#191919"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
